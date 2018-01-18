@@ -445,25 +445,12 @@ button.rbc-input::-moz-focus-inner {
 .rbc-day-slot {
   position: relative;
 }
-.rbc-day-slot .rbc-events-container {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 10px;
-  top: 0;
-  pointer-events: none;
-}
-.rbc-day-slot .rbc-events-container.rtl {
-  left: 10px;
-  right: 0;
-}
 .rbc-day-slot .rbc-event {
   border: 1px solid #265985;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   max-height: 100%;
-  min-height: 20px;
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
   flex-flow: column wrap;
@@ -471,8 +458,6 @@ button.rbc-input::-moz-focus-inner {
   -ms-flex-align: start;
   align-items: flex-start;
   overflow: hidden;
-  position: absolute;
-  z-index: 2;
 }
 .rbc-day-slot .rbc-event-label {
   -webkit-flex: none;
@@ -504,6 +489,10 @@ button.rbc-input::-moz-focus-inner {
 }
 .rbc-day-header {
   text-align: center;
+}
+.rbc-day-slot .rbc-event {
+  position: absolute;
+  z-index: 2;
 }
 .rbc-slot-selection {
   z-index: 10;
